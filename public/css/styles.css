@@ -1,0 +1,162 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-brand.me-auto{
+    font-weight: 500;
+    color: #000000;
+    font-size: 18px;
+    transition: 0.3s color;
+  
+}
+.navbar-brand.me-auto:hover{
+        color: #00bbf0;
+}
+
+.navbar{
+    background-color: white;
+    height: 80px;
+    margin: 10px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.login-button{
+    background-color: #ffffff;
+    color: #00bbf0;
+    font-size: .5em;
+    padding: 18px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    transition: 0.3s background-color;
+}
+.login-button:hover{
+    background-color: #00bcf0ad;
+    color: #ffffff;
+
+}
+.navbar-toggler.pe-0{
+    border: none;
+    font-size: 1.25rem;
+
+}
+.navbar-toggler.pe-0:focus,.btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.nav-link.mx-lg-2{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+    /* font-weight: bold; */
+}
+.nav-link.mx-lg-2:hover,.nav-link.mx-lg-2.active{
+        color: #000;
+}
+@media(min-width:991px){
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width :100%;
+        height: 2px;
+        background-color: #00bbf0;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+     }
+     .nav-link:hover::before,.nav-link.active::before{
+         width: 100%;
+         visibility: visible;
+     }
+}
+
+.hero-section{
+    background-image: url("../images/doctor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+ 
+.hero-section::before{
+    background-color: rgba(35, 223, 247, 0.25);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.hero-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+    
+} 
+.hero-section h1{
+    font-size: 2.5em;
+   font-weight: bold;
+}
+.hero-section p{
+    font-size: .7em;
+  
+}
+
+.d-flex.justify-content-evenly div {
+     border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: #00bbf0;
+}
+.d-flex.justify-content-evenly div a img{
+    height: 70px;
+    width: 70px;
+ 
+    margin: 15px;
+}
+#colposcopie{
+    width: 105px;
+    height: 105px;
+    margin: -2px;
+
+}
+#span-col{
+    text-align: center;
+    margin-left: 15px;
+
+}
+#span-in{
+    text-align: center;
+    margin-left: -29px;
+}
+.section-services span{
+  
+    display: block;
+    width: max-content;
+    margin-left: -15px;
+    font-size: 15px;
+}
+
+.section-services h1{
+    text-align: center;
+}
+footer{
+    height: 15em;
+   
+    background-color: #00bbf0;
+}
+.lien img{
+        width: 25px;
+        height: 25px;
+       padding: 3px;
+       margin: 6px;
+}
+.lien {
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
