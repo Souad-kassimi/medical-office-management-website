@@ -66,7 +66,7 @@ body{
         visibility: hidden;
         transition: 0.3s ease-in-out;
      }
-     .nav-link:hover::before,.nav-link.active::before{
+     .nav-link:hover::before{
          width: 100%;
          visibility: visible;
      }
@@ -145,8 +145,7 @@ body{
     text-align: center;
 }
 footer{
-    height: 15em;
-   
+    height: 18em;
     background-color: #00bbf0;
 }
 .lien img{
@@ -160,3 +159,9 @@ footer{
     text-decoration: none;
     font-size: 15px;
 }
+
+
+
+
+
+

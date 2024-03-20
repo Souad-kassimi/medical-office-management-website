@@ -1,10 +1,10 @@
-<footer class="text-dark text-center text-lg-start mt-5">
+<footer  class="p-3">
     
-        <div class="container p-4">
+        <div class="container">
          
           <div class="row">
       
-           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+           <div class="col-lg-8 col-md-12 mb-4 mb-md-0">
            
               <h5 class="text-uppercase">Plus D'informations</h5>
       
@@ -25,7 +25,7 @@
             </div>
            
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-3  mb-4 mb-md-0">
               <h5 class="text-uppercase mb-0 ">Links</h5>
       
               <ul class="list-unstyled">
@@ -46,12 +46,9 @@
           
           </div>
           
+          <div class="text-center">
+            © 2024 Copyright: souad & fatimazahra
+          </div>  
         </div>
-       
-
-        <div class="text-center p-3">
-          © 2024 Copyright: souad & fatimazahra
-        </div>
-      
-      
+           
 </footer>

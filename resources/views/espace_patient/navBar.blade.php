@@ -13,12 +13,12 @@
               <a class="nav-link mx-lg-2 active" aria-current="page" href="/">Acceuil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="#">Services</a>
+              <a class="nav-link mx-lg-2 active" href="#">Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Contactez-nous</a>
+                <a class="nav-link mx-lg-2 active" href="#">Contactez-nous</a>
               </li><li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Rendez-vous</a>
+                <a class="nav-link mx-lg-2 active" href="/rendezVous">Rendez-vous</a>
               </li>
            
           </ul>
