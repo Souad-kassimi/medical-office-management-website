@@ -42,7 +42,7 @@
                     </select>
                 </div>
                <div class="col-10 ms-5 mt-3 ps-3">
-                <input type="submit" class="form-control" value="Rendez-Vous" style="background-image: linear-gradient(to right,#00BFFF,#FFFACD)">
+                <button type="submit" class="form-control" style="background-image: linear-gradient(to right,#00BFFF,#FFFACD)">Confirmer</button>
                </div>
             </div>
         </div>
