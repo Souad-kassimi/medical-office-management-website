@@ -2,17 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dates_non_dispo;
 use App\Models\patient;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
-class PatientController extends Controller
+class adminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+        $today = Carbon::today();
+        $patientsfilter = patient::whereDate('date_rendez_vous', '=', $today)->get();
+        return view('espace_doctor.dashbord.dashbord',compact('patientsfilter'));
+        
+       
     }
 
     /**
@@ -20,8 +28,8 @@ class PatientController extends Controller
      */
     public function create()
     {
-        return view('espace_patient.acceuil');
-        
+        $patients= patient::all();
+        return view('espace_doctor.dashbord.listePatients',compact('patients'));
     }
 
     /**
@@ -30,15 +38,16 @@ class PatientController extends Controller
     public function store(Request $request)
     {
        
-
     }
+   
+
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-       
+       return view('espace_doctor.dashbord.ajouterPatient');
     }
 
     /**

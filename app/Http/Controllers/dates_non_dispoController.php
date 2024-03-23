@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\dates_non_dispo;
-use App\Models\patient;
 use Illuminate\Http\Request;
 
-class PatientController extends Controller
+class dates_non_dispoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+       $dates=dates_non_dispo::all();
+       return view('espace_doctor.dashbord.listeDate',compact('dates'));
+
     }
 
     /**
@@ -20,7 +22,6 @@ class PatientController extends Controller
      */
     public function create()
     {
-        return view('espace_patient.acceuil');
         
     }
 
@@ -29,7 +30,11 @@ class PatientController extends Controller
      */
     public function store(Request $request)
     {
-       
+        $dates=$request->validate([
+            'date_pas_dispo'=>'required|date'
+        ]);
+        dates_non_dispo::create($dates);
+        return redirect()->route('admin.index')->with('successdates', 'Les dates ont été ajoutées avec succès.');
 
     }
 
@@ -38,7 +43,7 @@ class PatientController extends Controller
      */
     public function show(string $id)
     {
-       
+        //
     }
 
     /**
@@ -62,6 +67,8 @@ class PatientController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $date=dates_non_dispo::findOrFail($id);
+        $date->delete();
+        return redirect()->route('dateNonDispo.index')->with('success','les donnees sont supprimer avec succes');
     }
 }

@@ -10,16 +10,21 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link mx-lg-2 active" aria-current="page" href="/">Acceuil</a>
+              <a class="nav-link mx-lg-2 active" aria-current="page" href="{{route('patient.create')}}">Acceuil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-lg-2 active" href="#">Services</a>
+              <a class="nav-link mx-lg-2 active" href="/patient/create/#services">Services</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mx-lg-2 active" href="#">Contactez-nous</a>
-              </li><li class="nav-item">
-                <a class="nav-link mx-lg-2 active" href="/rendezVous">Rendez-vous</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 active" href="{{route('rendezvous.index')}}">Rendez-vous</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 active" href="{{route('login.index')}}">Espace privé</a>
+              </li>
+              
            
           </ul>
         </div>

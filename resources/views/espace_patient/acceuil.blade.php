@@ -9,7 +9,7 @@
     <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
       <h1>Bienvenue</h1>
       <p>Sur Cabinet Dr.Samira BEKRIT</p>
-      <a href="#" class="login-button">Prendre Rendez-Vous En Un Clin D'oeil</a>
+      <a href="{{route('rendezvous.index')}}" class="login-button">Prendre Rendez-Vous En Un Clin D'oeil</a>
   
     </div>
 </section>
@@ -31,8 +31,8 @@
         </div>
     </div>
   </section>
-  <section class="section-services mb-4">
-    <h1>Services</h1>
+  <section class="section-services mb-5">
+    <h1 id="services">Services</h1>
     <div class="d-flex justify-content-evenly ">
     
       <div><a href="" ><img src="{{url('images/stethoscope.png')}}" alt="image"></a><br>
