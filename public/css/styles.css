@@ -48,7 +48,7 @@ body{
     color: #666777;
     font-weight: 500;
     position: relative;
-    /* font-weight: bold; */
+  
 }
 .nav-link.mx-lg-2:hover,.nav-link.mx-lg-2.active{
         color: #000;
@@ -147,7 +147,8 @@ body{
 footer{
     
     height: 18em;
-    background-color: #00bbf0;
+    color: #fff;
+    background-color: #7ee1fc;
 }
 .lien img{
         width: 25px;
