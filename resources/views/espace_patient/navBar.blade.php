@@ -16,7 +16,7 @@
               <a class="nav-link mx-lg-2 active" href="/patient/create/#services">Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-lg-2 active" href="#">Contactez-nous</a>
+                <a class="nav-link mx-lg-2 active" href="{{route('espace_patient.contact')}}">Contactez-nous</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link mx-lg-2 active" href="{{route('rendezvous.index')}}">Rendez-vous</a>
