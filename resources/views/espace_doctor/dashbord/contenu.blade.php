@@ -16,7 +16,7 @@
                     class="text-dark">Samira Bekrit</span></h1>
             <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><img src="{{URL('/images/menu.png')}}" alt="c" class="img1"></button>
         </div>
-
+         
         <ul class="list-unstyled px-2">
             <li class="">
                 <a href="{{route('admin.index')}}" class="text-decoration-none px-3 py-2 d-block">
@@ -29,8 +29,8 @@
                 
             </a>
         </li>
-            <li class=""><a href="{{route('rendezvous.index')}}" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
-                    <span><img src="{{URL('/images/mail.png')}}" alt="c" class="img1 me-1"> Messages</span>
+            <li class=""><a href="{{route('espace_doctor.dashbord.emails')}}" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+                    <span><img src="{{URL('/images/mail.png')}}" alt="c" class="img1 me-1"> Emails</span>
                     
                 </a>
             </li>
