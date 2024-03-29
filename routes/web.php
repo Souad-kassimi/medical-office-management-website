@@ -15,6 +15,7 @@ Route::get('/',function(){
 Route::resource('patient',patientController::class);
 //routes de rendez-vous
 Route::resource('rendezvous',rendezvousController::class);
+// Route::post('/count',[rendezvousController::class,'count'])->name('count.route');
 
 //routes de admin
 Route::resource('admin',adminController::class)->middleware('auth');

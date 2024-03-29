@@ -18,9 +18,12 @@
             </tr>
         </thead>
         <tbody>
+            @php
+            $ide=1
+            @endphp
             @foreach ($patients as $patient)
             <tr>
-                <td>{{$patient->id}}</td>
+                <td>{{$ide}}</td>
                 <td>{{$patient->prenom}} {{$patient->nom}}</td>
                 <td>{{$patient->cin}}</td>
                 <td>{{$patient->genre}}</td>
@@ -31,7 +34,9 @@
                     <button type="submit" class="btn btn-danger">Supprimer</button>
                     </form></td>
             </tr>
-           
+            @php
+                $ide+=1
+            @endphp
                 
             @endforeach
         </tbody>

@@ -1,4 +1,7 @@
 @extends('espace_patient.index')
+@section('title')
+Rendez-Vous
+@endsection
 @section('main')
 <div  style="background-image: linear-gradient(to left,#F5F5DC,#FFFACD)">
     <div class="container  col-lg-8 p-5">

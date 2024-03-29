@@ -1,4 +1,7 @@
 @extends('espace_patient.index')
+@section('title')
+Contactez-Nous
+@endsection
 <!-- <div class="mt-3"></div> -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 @section('main')

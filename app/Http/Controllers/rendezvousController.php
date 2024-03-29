@@ -24,12 +24,17 @@ class rendezvousController extends Controller
     {
         //
     }
-
+   
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
+        if ($request->filled('count')) {
+            // If count value is provided, update it in the session
+            session(['count' => (int)$request->input('count')]);
+        }
+    
         $data = $request->validate([
             'nom' => 'required',
             'prenom' => 'required',
@@ -37,14 +42,13 @@ class rendezvousController extends Controller
             'email' => 'nullable',
             'cin' => 'required',
             'ville' => 'required',
-            
             'genre' => 'required',
             'date_rendez_vous' => 'required|date',
         ]);
 
-
+        $count = session('count', 10);
         $dateRendezVous = $data['date_rendez_vous'];
-        
+      
         $appointmentsCount = patient::where('date_rendez_vous', $data['date_rendez_vous'])->count();
         $dateObj = \Carbon\Carbon::createFromFormat('Y-m-d', $dateRendezVous);
         $date_non_dispo = dates_non_dispo::where('date_pas_dispo', $dateRendezVous)->exists();
@@ -58,7 +62,7 @@ class rendezvousController extends Controller
             return back()->withErrors(['errors'=>'Les rendez-vous ne sont pas disponibles les week-ends.']);
         }
         else{
-            if ($appointmentsCount >= 20) {
+            if ($appointmentsCount >= $count) {
                 return back()->withErrors(['errors'=>'Le nombre maximum de rendez-vous pour cette date a été atteint. Veuillez réessayer plus tard.']);
             }else{
                 $lastTour = patient::where('date_rendez_vous', $data['date_rendez_vous'])->max('tour');

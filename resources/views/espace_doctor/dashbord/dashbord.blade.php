@@ -9,14 +9,15 @@ Dashboard
             </div>
         @endif
         <div class="row">    
-            @foreach ($patientsfilter as $item)
-            <div class="col-md-4">
+            @foreach ($patientsfilter->sortBy('tour') as $item)
+            <div class="col-md-4 mb-2">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-body-secondary">{{$item->tour}}</h6>
+                      <h6 class="card-subtitle mb-2 btn btn-warning text-dark ">{{$item->tour}}</h6>
                       <h5 class="card-title">{{$item->prenom}} {{$item->nom}}</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="" class="btn btn-outline-danger">Supprimer</a>
+                      <p class="card-text">CIN: {{$item->cin}}, ville: {{$item->ville}}
+                      </p>
+                      {{-- <a href="" class="btn btn-outline-danger">Supprimer</a> --}}
                       
                     </div>
                   </div>

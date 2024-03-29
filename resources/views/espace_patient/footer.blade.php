@@ -46,7 +46,7 @@
           
           </div>
           
-          <div class="text-center">
+          <div class="text-center text-dark">
             © 2024 Copyright: souad & fatimazahra
           </div>  
         </div>

@@ -1,4 +1,7 @@
 @extends('espace_patient.index')
+@section('title')
+Espace privé
+@endsection
 @section('main')
 <section>
     <div class="body">

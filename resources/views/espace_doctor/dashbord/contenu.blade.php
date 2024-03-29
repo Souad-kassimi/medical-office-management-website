@@ -75,6 +75,19 @@
                               
                                 @endif
                         </li>
+                        <li class="nav-item ms-2">
+                            <form class="d-flex" method="POST" action="{{route('rendezvous.store')}}" >
+                                @csrf
+                                <div class="input-group">
+                                    <span class="input-group-text">Augmenter le nombre des rendez-vous:</span>
+                                    <input type="text" name="count"  class="form-control w-25" placeholder="Valeur par defaut 10">
+                                    <input type="submit" value="augmenter"  class="btn btn-outline-primary">
+                                   
+                                  </div>
+                              </form>
+                              
+                             
+                        </li>
 
                     </ul>
 
