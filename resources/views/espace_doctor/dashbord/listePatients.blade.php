@@ -1,4 +1,5 @@
 @extends('espace_doctor.dashbord.contenu')
+
 @section('titre')
     Liste Patients
 @endsection
@@ -11,10 +12,10 @@
     
         
     
-    <table class="container table table-striped table-hover">
+    <table class="container table table-bordered">
         <thead>
             <tr>
-                <th>#</th><th>Nom Complet</th><th>CIN</th><th>Genre</th><th>ville</th><th>Action</th>
+                <th>ID</th><th>Nom Complet</th><th>CIN</th><th>Genre</th><th>ville</th><th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -41,6 +42,7 @@
             @endforeach
         </tbody>
     </table>
+    {{$patients->links()}}
 </section>
 
 @endsection

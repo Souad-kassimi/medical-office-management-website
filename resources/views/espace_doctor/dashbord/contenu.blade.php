@@ -94,7 +94,7 @@
                 </div>
             </div>
         </nav>
-        <div class="dashboard-content px-3 pt-2">
+        <div class="dashboard-content px-3 pt-2" >
             @yield('section')
           
        </div>

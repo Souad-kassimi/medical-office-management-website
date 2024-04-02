@@ -54,6 +54,11 @@
     padding-left: 40px; /* Ajustez la valeur pour aligner correctement le texte */
   }
   
-  
+.contactez-nous{
+    background-image: url('/images/2870377_14995.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
   
 

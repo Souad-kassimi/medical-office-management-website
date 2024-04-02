@@ -13,9 +13,10 @@ Dashboard
             <div class="col-md-4 mb-2">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 btn btn-warning text-dark ">{{$item->tour}}</h6>
+                      <h6 class="card-subtitle mb-2 btn btn-primary text-white ">{{$item->tour}}</h6>
                       <h5 class="card-title">{{$item->prenom}} {{$item->nom}}</h5>
-                      <p class="card-text">CIN: {{$item->cin}}, ville: {{$item->ville}}
+                      <h5 class="card-title">{{$item->date_rendez_vous}}</h5>
+                      <p class="card-text">CIN: {{$item->cin}}, Ville: {{$item->ville}}
                       </p>
                       {{-- <a href="" class="btn btn-outline-danger">Supprimer</a> --}}
                       

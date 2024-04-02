@@ -35,19 +35,19 @@
     <h1 id="services">Services</h1>
     <div class="d-flex justify-content-evenly ">
     
-      <div><a href="" ><img src="{{url('images/stethoscope.png')}}" alt="image"></a><br>
+      <div class="circle"><a href="" ><img src="{{url('images/stethoscope.png')}}" alt="image"></a><br>
       <span>Médecine Générale</span>
      </div>
-      <div><a href=""><img src="{{url('images/echocardiography.png')}}" alt="image"></a><br>
+      <div class="circle"><a href=""><img src="{{url('images/echocardiography.png')}}" alt="image"></a><br>
         <span>Echographie Clinique</span>
       </div>
-      <div><a href=""><img src="{{url('images/grief.png')}}" alt="image"></a><br>
+      <div class="circle"><a href=""><img src="{{url('images/grief.png')}}" alt="image"></a><br>
         <span id="span-in">Infertilité-stérilité du couple</span>
       </div>
-      <div><a href=""><img src="{{url('images/maternity.png')}}" alt="image"></a><br>
+      <div class="circle"><a href=""><img src="{{url('images/maternity.png')}}" alt="image"></a><br>
         <span>Gynécologie Médicale</span>
       </div>
-      <div><a href=""><img src="{{url('images/medicine.png')}}" alt="image" id="colposcopie"></a><br>
+      <div class="circle"><a href=""><img src="{{url('images/medicine.png')}}" alt="image" id="colposcopie"></a><br>
         <span id="span-col">Colposcopie</span>
       </div>
       </div>         

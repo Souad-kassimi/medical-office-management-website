@@ -46,7 +46,7 @@ class rendezvousController extends Controller
             'date_rendez_vous' => 'required|date',
         ]);
 
-        $count = session('count', 10);
+        $count = session('count',20);
         $dateRendezVous = $data['date_rendez_vous'];
       
         $appointmentsCount = patient::where('date_rendez_vous', $data['date_rendez_vous'])->count();
@@ -54,16 +54,16 @@ class rendezvousController extends Controller
         $date_non_dispo = dates_non_dispo::where('date_pas_dispo', $dateRendezVous)->exists();
 
         if ($date_non_dispo) {
-            return back()->withErrors(['errors'=>'Désolé, Cette date est pas disponible']);
+            return back()->withErrors(['errors'=>'Désolé, Cette date est pas disponible'])->withInput();
         }
 
         if ($dateObj->dayOfWeek === 0 || $dateObj->dayOfWeek === 6) {
             
-            return back()->withErrors(['errors'=>'Les rendez-vous ne sont pas disponibles les week-ends.']);
+            return back()->withErrors(['errors'=>'Les rendez-vous ne sont pas disponibles les week-ends.'])->withInput();
         }
         else{
             if ($appointmentsCount >= $count) {
-                return back()->withErrors(['errors'=>'Le nombre maximum de rendez-vous pour cette date a été atteint. Veuillez réessayer plus tard.']);
+                return back()->withErrors(['errors'=>'Le nombre maximum de rendez-vous pour cette date a été atteint. Veuillez réessayer plus tard.'])->withInput();
             }else{
                 $lastTour = patient::where('date_rendez_vous', $data['date_rendez_vous'])->max('tour');
       

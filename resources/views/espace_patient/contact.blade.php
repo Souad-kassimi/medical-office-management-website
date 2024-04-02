@@ -6,7 +6,7 @@ Contactez-Nous
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 @section('main')
 <link rel="stylesheet" href="{{asset('css/css.css')}}">
-<div  style="     background-color: #e7f1f6" >
+<div  class="contactez-nous" >
     <div class="container  col-lg-5 p-5 ">
         <div class="container">
             <form action="{{route('espace_patient.submitForm')}}" method="POST">

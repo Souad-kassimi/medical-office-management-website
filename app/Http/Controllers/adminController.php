@@ -28,7 +28,9 @@ class adminController extends Controller
      */
     public function create()
     {
-        $patients= patient::all();
+        // $patients= patient::all();
+        $patients= patient::paginate(10);
+        
         return view('espace_doctor.dashbord.listePatients',compact('patients'));
     }
 
@@ -47,7 +49,7 @@ class adminController extends Controller
      */
     public function show()
     {
-       return view('espace_doctor.dashbord.ajouterPatient');
+     
     }
 
     /**

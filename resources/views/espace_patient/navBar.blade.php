@@ -25,6 +25,16 @@
                 <a class="nav-link mx-lg-2 active" href="{{route('login.index')}}">Espace privé</a>
               </li>
               
+              {{-- @auth
+                  
+              @endauth
+              @guest
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 active" href="{{route('login.index')}}">Espace privé</a>
+              </li>
+              @endguest --}}
+              
+              
            
           </ul>
         </div>

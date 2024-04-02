@@ -1,4 +1,4 @@
-<footer  class="p-3">
+<footer  class="footer p-3">
     
         <div class="container">
          
@@ -6,7 +6,7 @@
       
            <div class="col-lg-8 col-md-12 mb-4 mb-md-0">
            
-              <h5 class="text-uppercase">Plus D'informations</h5>
+              <h5 class="text-uppercase fw-bold">Plus D'informations</h5>
       
               <ul class="list-unstyled mb-0 d-flex flex-column mb-3">
                 <li>
@@ -26,7 +26,7 @@
            
 
             <div class="col-lg-3  mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0 ">Links</h5>
+              <h5 class="text-uppercase mb-0 fw-bold">Links</h5>
       
               <ul class="list-unstyled">
                 <li>
@@ -46,7 +46,7 @@
           
           </div>
           
-          <div class="text-center text-dark">
+          <div class="text-center text-dark fw-bold">
             © 2024 Copyright: souad & fatimazahra
           </div>  
         </div>

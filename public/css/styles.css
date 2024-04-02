@@ -1,4 +1,4 @@
-body{
+*{
     font-family: Arial, Helvetica, sans-serif;
 }
 .navbar-brand.me-auto{
@@ -9,7 +9,7 @@ body{
   
 }
 .navbar-brand.me-auto:hover{
-        color: #00bbf0;
+        color: #1E90FF;
 }
 
 .navbar{
@@ -22,7 +22,7 @@ body{
 
 .login-button{
     background-color: #ffffff;
-    color: #00bbf0;
+    color: #1E90FF;
     font-size: .5em;
     padding: 18px 30px;
     border-radius: 10px;
@@ -31,7 +31,7 @@ body{
     transition: 0.3s background-color;
 }
 .login-button:hover{
-    background-color: #00bcf0ad;
+    background-color: #1E90FF;
     color: #ffffff;
 
 }
@@ -62,7 +62,7 @@ body{
         transform: translateX(-50%);
         width :100%;
         height: 2px;
-        background-color: #00bbf0;
+        background-color: #1E90FF;
         visibility: hidden;
         transition: 0.3s ease-in-out;
      }
@@ -115,7 +115,6 @@ body{
 .d-flex.justify-content-evenly div a img{
     height: 70px;
     width: 70px;
- 
     margin: 15px;
 }
 #colposcopie{
@@ -144,12 +143,87 @@ body{
 .section-services h1{
     text-align: center;
 }
-footer{
+
+@media(max-width: 916px){
+    .section-services span{
+        display: block;
+        width: max-content;
+        margin-left: -10px;
+        font-size: 10px;
+    }
+    .d-flex.justify-content-evenly div {
+        border-radius: 100px;
+       height: 80px;
+       width: 80px;
+       background-color: #00bbf0;
+   }
+    .d-flex.justify-content-evenly div a img{
+        height: 50px;
+        width: 50px;
+        margin: 15px;
+    }
+    #colposcopie{
+        width: 95px;
+        height: 95px;
+        margin: -7px;
+    
+    }
+    
+   }
+   @media (max-width: 658px) {
+    .circle span {
+        display: block;
+        width: max-content;
+        margin-left: 30px;
+        font-size: 10px;
+    }
+    #colposcopie{
+        width: 95px;
+        height: 95px;
+       margin-left: 2.5em;
+    
+    }
+    #span-in{
+        margin-left: 2em;
+    }
+    #span-col{
+        margin-left: 6em;
+    }
+    .circle {
+        margin-bottom: 15px;
+    }
+
+    .d-flex.justify-content-evenly {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+    }
+
+    .d-flex.justify-content-evenly > .circle {
+        width: calc(50% - 15px); 
+        margin-bottom: 15px;
+    }
+    .d-flex.justify-content-evenly div a img{
+        height: 50px;
+        width: 50px;
+        margin-left: 4em;
+    }
+    
+}
+
+/* footer */
+.footer{
     
     height: 18em;
     color: #fff;
-    background-color: #7ee1fc;
+    background: linear-gradient(to left,#FFFFFF,#1E90FF);
+  
 }
+@media(max-width: 992px){
+    .footer{
+        height: 30em;
+    }
+   }
 .lien img{
         width: 25px;
         height: 25px;
@@ -160,6 +234,7 @@ footer{
     color: #000000;
     text-decoration: none;
     font-size: 15px;
+    /* font-weight: bold; */
 }
 
 
@@ -173,7 +248,7 @@ footer{
 	width: 450px;
 	height: 400px;
 	padding: 80px 40px;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(30,144,255, 0.4);
 }
 .session{
     
@@ -223,7 +298,8 @@ footer{
 	height: 30px;
 	color: #000000;
 	font-size: 15px;
-	background: linear-gradient(to left,#7FFFD4,#FFFACD);
+	background: #1E90FF;
+
 	cursor: pointer;
 	border-radius: 25px;
 	border: none;
@@ -243,21 +319,17 @@ footer{
 	padding: 0;
     width: 100%;
 	height: 100vh;
-	font-family: 'Poppins', sans-serif;
-	background-image: linear-gradient(to left,#7FFFD4,#FFFACD);
+    background-image: url('/images/2870377_14995.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
-/* body:before {
-	content: '';
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	
-} */
+
 
 /* sidebar  */
 #side_nav {
-    background: linear-gradient(to left,#F5F5DC,#FFFACD);
+    background: #1E90FF;
     width: 250px;
     height: 100vh;
     position: fixed;
@@ -268,6 +340,10 @@ footer{
 }
 
 .content {
+    background-image: url('/images/2870377_14995.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
     width: calc(100% - 250px); 
     margin-left: 250px; 
@@ -317,6 +393,17 @@ footer{
     margin-top: -5px;
    }
 
+/* rendez vous */
+.rendez-bg{
+    background-image: url('/images/2870377_14995.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#card{
 
+   
+    background-color: rgba(255, 255, 255, 0.4);
+}
 
 
