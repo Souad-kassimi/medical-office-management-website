@@ -1,20 +1,31 @@
 
-
 .msg:hover {
     /* background-image: linear-gradient(to right,#fbf7d1 ,#b9e3f6); */
     background-image: linear-gradient(to right,#f9fafb ,#e7f1f6);
     font-size: 20px;
     
 }
+.btn{
+    background-color: #5bb5f9;
+    color: white;
+}
 .btn:hover{
-    background:#bae4f1 ;
+    color:#5bb5f9 ;
+    border-color: #5bb5f9;
+
 }
 .input{
     border-radius: 30px;
+    /* padding: ; */
 }
-.card2{
+.card{
     border-radius: 40px;
-    background-image: linear-gradient(to right,#fbf7d1 ,#b9e3f6) ;
+    /* background-image: linear-gradient(to right,#fbf7d1 ,#b9e3f6) ; */
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+.text{
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .input-icon {
     position: relative;
@@ -42,7 +53,7 @@
 
 .input-icon-msg i {
     position: absolute;
-    top: 15%;
+    top: 14%;
     left: 20px; /* Ajuster la position de l'icône */
     transform: translateY(-50%);
 }
@@ -60,5 +71,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
   
 

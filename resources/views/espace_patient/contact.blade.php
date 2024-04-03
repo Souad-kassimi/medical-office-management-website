@@ -7,33 +7,29 @@ Contactez-Nous
 @section('main')
 <link rel="stylesheet" href="{{asset('css/css.css')}}">
 <div  class="contactez-nous" >
+<div class=" p-3" ></div>
     <div class="container  col-lg-5 p-5 ">
-        <div class="container">
             <form action="{{route('espace_patient.submitForm')}}" method="POST">
                 @csrf
-                <div class="card p-5 mt-5 ">
-                    <div class="card p-5 card2">
-                        <h1 class="text-center">Contactez-nous</h1>
-                        <div class="form-group mt-3  w-100 input-icon">
+                    <div class="card mt-5 p-5 ">
+                        <h1 class="text-center text">Contactez-nous</h1>
+                        <div class="form-group mt-4  w-100 input-icon">
                             <i class="bi bi-person"></i>
-                            <input type="text" class="form-control input " id="name" name="name" required  placeholder="Nom">
+                            <input type="text" class="form-control input " id="name" name="name" required  placeholder="NOM">
                         </div>
-                        <div class="form-group mt-3  w-100 input-icon">
+                        <div class="form-group mt-4  w-100 input-icon">
                             <i class="bi bi-envelope"></i>
-                            <input type="text" class="form-control input" id="email" name="email" required placeholder="E-mail">
+                            <input type="text" class="form-control input " id="email" name="email" required placeholder="E-MAIL">
                         </div>
-                        <div class="form-group mt-3  w-100 input-icon-msg">
-                            <!-- <i class="bi bi-chat-left-text"></i> -->
+                        <div class="form-group mt-4  w-100 input-icon-msg">
                             <i class="bi bi-person"></i>
-                            <textarea class="form-control input" id="message" name="message" rows="5" required placeholder="Message"></textarea>
+                            <textarea class="form-control input" id="message" name="message" rows="5" required placeholder="MESSAGE"></textarea>
                         </div>
-                        <div class="mt-3 ps-3 ">
-                        <button type="submit" class="btn btn-primary  w-100 input text-dark " style="background-image: linear-gradient(to right,#fbf7d1 ,#bae4f1) "  >Envoyer</button>
+                        <div class="mt-4 ps-3 ">
+                        <button type="submit" class="btn  w-100 input ">ENVOYER</button>
                         <div>
                     </div>
-                </div>
             </form>
-        </div>   
     </div>
 </div>
 
