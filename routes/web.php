@@ -8,8 +8,11 @@ use App\Http\Controllers\rendezvousController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
+// Route::get('/',function(){
+//     return view('espace_patient.acceuil');
+// });
 Route::get('/',function(){
-    return view('espace_patient.acceuil');
+    return view('med.index');
 });
 //routes de patient
 Route::resource('patient',patientController::class);

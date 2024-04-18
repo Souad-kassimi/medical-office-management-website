@@ -45,11 +45,11 @@
     </head>
 <body>
 
-        
+    @include('med.Layout.nav')    
   <main>
     @yield('main')
   </main>
-    
+    @include('med.Layout.footer')
    
 </body>
 </html>
