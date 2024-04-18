@@ -11,7 +11,7 @@ class PatientController extends Controller
 
     public function create()
     {
-        return view('espace_patient.acceuil');
+        return view('med.acceuil');
         
     }
 

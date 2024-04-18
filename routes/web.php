@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('espace_patient.acceuil');
 // });
 Route::get('/',function(){
-    return view('med.index');
+    return view('med.accueil');
 });
 //routes de patient
 Route::resource('patient',patientController::class);
@@ -32,9 +32,9 @@ Route::resource('admin',adminController::class)->middleware('sign');
 //routes de dates
 Route::resource('dateNonDispo',dates_non_dispoController::class);
 //routes de contact
-Route::get('/contact', [ContactController::class,'showForm'])->name('espace_patient.contact');
-Route::post('/contact/store',[ContactController::class,'submitForm'])->name('espace_patient.submitForm');
-Route::get('/emails', [ContactController::class,'MessageEmails'])->name('espace_doctor.dashbord.emails');
+Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact');
+Route::post('/contact/store',[ContactController::class,'submitForm'])->name('med.submitForm');
+Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
 
 Route::get('/index',function(){
     return view('med.index');
