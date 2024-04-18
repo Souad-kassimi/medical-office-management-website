@@ -9,7 +9,7 @@ use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',function(){
-    return view('welcome');
+    return view('espace_patient.acceuil');
 });
 //routes de patient
 Route::resource('patient',patientController::class);
@@ -33,8 +33,12 @@ Route::get('/contact', [ContactController::class,'showForm'])->name('espace_pati
 Route::post('/contact/store',[ContactController::class,'submitForm'])->name('espace_patient.submitForm');
 Route::get('/emails', [ContactController::class,'MessageEmails'])->name('espace_doctor.dashbord.emails');
 
-
-
+Route::get('/index',function(){
+    return view('med.index');
+});
+Route::get('/conta',function(){
+    return view('med.conta');
+});
 
 
 

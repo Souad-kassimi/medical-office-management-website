@@ -21,7 +21,9 @@
 .card{
     border-radius: 40px;
     /* background-image: linear-gradient(to right,#fbf7d1 ,#b9e3f6) ; */
-    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-color: rgba(255, 255, 255);
+
 
 }
 .text{
@@ -70,6 +72,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-color: rgba(238,130,238, 0.25); */
+
 }
 
   

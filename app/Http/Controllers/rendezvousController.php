@@ -31,7 +31,7 @@ class rendezvousController extends Controller
     public function store(Request $request)
     {
         if ($request->filled('count')) {
-            // If count value is provided, update it in the session
+    
             session(['count' => (int)$request->input('count')]);
         }
     
@@ -103,9 +103,6 @@ class rendezvousController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $patient=patient::findOrFail($id);

@@ -21,9 +21,9 @@
               <li class="nav-item">
                 <a class="nav-link mx-lg-2 active" href="{{route('rendezvous.index')}}">Rendez-vous</a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a class="nav-link mx-lg-2 active" href="{{route('login.index')}}">Espace privé</a>
-              </li>
+              </li> --}}
               
               {{-- @auth
                   

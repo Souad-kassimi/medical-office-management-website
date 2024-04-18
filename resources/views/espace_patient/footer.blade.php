@@ -26,7 +26,7 @@
            
 
             <div class="col-lg-3  mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0 fw-bold">Links</h5>
+              <h5 class="text-uppercase mb-0 fw-bold">Liens</h5>
       
               <ul class="list-unstyled">
                 <li>
