@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Session;
 
 class login extends Controller
 {
+    
     public function index(){
         return view('espace_doctor.login');
     }

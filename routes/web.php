@@ -13,36 +13,31 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/',function(){
     return view('med.accueil');
-});
+})->name('patient');
 //routes de patient
-Route::resource('patient',patientController::class);
+// Route::resource('patient',patientController::class);
+// Route::get('/patient',[patientController::class,'patientAcceuil'])->name('patient');
 //routes de rendez-vous
-Route::resource('rendezvous',rendezvousController::class);
+// Route::resource('rendezvous',rendezvousController::class);
 //routes de login
-Route::get('/login',[login::class,'index'])->name('login.index');
-Route::get('/logout',[login::class,'logout'])->name('login.logout');
-Route::post('/login/singin',[login::class,'login'])->name('login.signin');
+// Route::get('/login',[login::class,'index'])->name('login.index');
+// Route::get('/logout',[login::class,'logout'])->name('login.logout');
+// Route::post('/login/singin',[login::class,'login'])->name('login.signin');
 
 
 //routes de admin
 // Route::resource('admin',adminController::class)->middleware('auth');
-Route::resource('admin',adminController::class)->middleware('sign');
+// Route::resource('admin',adminController::class)->middleware('sign');
 
 
 //routes de dates
-Route::resource('dateNonDispo',dates_non_dispoController::class);
+// Route::resource('dateNonDispo',dates_non_dispoController::class);
 //routes de contact
+
+// Route::post('/contact/store',[ContactController::class,'submitForm'])->name('med.submitForm');
+// Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
+
 Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact');
-Route::post('/contact/store',[ContactController::class,'submitForm'])->name('med.submitForm');
-Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
+Route::get('/rendez-vous',[patientController::class,'rendezVousPage'] )->name('rendez-vous');
 
-Route::get('/index',function(){
-    return view('med.index');
-});
-Route::get('/conta',function(){
-    return view('med.conta');
-});
-
-
-
-
+Route::post('/rendezVous/ajouter',[patientController::class,'rendezVous'])->name('rendezVous');
