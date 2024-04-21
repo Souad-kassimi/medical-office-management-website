@@ -1,5 +1,5 @@
 
-    <header class="header" >
+    <header class="header" id='home' >
     
         <div class="topbar">
             <div class="container">
@@ -9,7 +9,7 @@
                         <ul class="top-link">
                             <li><a href="{{route('patient')}}">Accueil</a></li>
                             <li><a href="{{ route('rendez-vous') }}">Rendez-vous</a></li>
-                            <li><a href="#">Contactez-nous</a></li>
+                            <li><a href="{{route('med.contact')}}">Contactez-nous</a></li>
                           
                         </ul>
                        
@@ -46,8 +46,8 @@
                                 <nav class="navigation">
                                     <ul class="nav menu">
                                         <li ><a href="{{route('patient')}}">Accueil</a></li> 
-                                        <li><a href="#">Services</a></li>               
-                                        <li><a href="#">Consultation en ligne</i></a></li>
+                                        <li><a href="/#services">Services</a></li>               
+                                        <li><a href="/#consultation">Consultation en ligne</i></a></li>
                                         <li><a href="{{route('med.contact')}}">Contactez-nous</a></li>
                                     </ul>
                                 </nav>

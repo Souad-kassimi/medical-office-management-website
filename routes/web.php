@@ -37,7 +37,11 @@ Route::get('/',function(){
 // Route::post('/contact/store',[ContactController::class,'submitForm'])->name('med.submitForm');
 // Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
 
-Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact');
 Route::get('/rendez-vous',[patientController::class,'rendezVousPage'] )->name('rendez-vous');
-
 Route::post('/rendezVous/ajouter',[patientController::class,'rendezVous'])->name('rendezVous');
+//Route de Contact
+Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact');
+Route::post('/contact', [ContactController::class,'submitForm'])->name('med.submitForm');
+Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
+
+
