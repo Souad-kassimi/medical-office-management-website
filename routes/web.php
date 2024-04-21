@@ -20,14 +20,14 @@ Route::get('/',function(){
 //routes de rendez-vous
 // Route::resource('rendezvous',rendezvousController::class);
 //routes de login
-// Route::get('/login',[login::class,'index'])->name('login.index');
-// Route::get('/logout',[login::class,'logout'])->name('login.logout');
-// Route::post('/login/singin',[login::class,'login'])->name('login.signin');
+Route::get('/login',[login::class,'index'])->name('login.index');
+Route::get('/logout',[login::class,'logout'])->name('login.logout');
+Route::post('/login/singin',[login::class,'login'])->name('login.signin');
 
 
 //routes de admin
-// Route::resource('admin',adminController::class)->middleware('auth');
-// Route::resource('admin',adminController::class)->middleware('sign');
+Route::resource('admin',adminController::class)->middleware('auth');
+Route::resource('admin',adminController::class)->middleware('sign');
 
 
 //routes de dates
@@ -38,6 +38,10 @@ Route::get('/',function(){
 // Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
 
 Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact');
-Route::get('/rendez-vous',[patientController::class,'rendezVousPage'] )->name('rendez-vous');
 
+Route::get('/rendez-vous',[patientController::class,'rendezVousPage'] )->name('rendez-vous');
 Route::post('/rendezVous/ajouter',[patientController::class,'rendezVous'])->name('rendezVous');
+
+Route::get('/dashboared',[login::class,'dashbord']);
+
+Route::get('/patient/{id}',[patientController::class,'patientdata'])->name('patient.data');

@@ -19,17 +19,17 @@
          
         <ul class="list-unstyled px-2">
             <li class="">
-                <a href="{{route('admin.index')}}" class="text-decoration-none px-3 py-2 d-block">
+                {{-- <a href="{{route('admin.index')}}" class="text-decoration-none px-3 py-2 d-block"> --}}
                 <img src="{{URL('/images/home.png')}}" alt="c" class="img1 me-1"> Dashboard
                 </a>
             </li>
             <li class=""><a href="{{route('admin.create')}}" class="text-decoration-none px-3 py-2 d-block"><img src="{{URL('/images/list.png')}}" alt="c" class="img1 me-1"> Liste des patients</a></li>
-            <li class=""><a href="{{route('rendezvous.index')}}" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+            {{-- <li class=""><a href="{{route('rendezvous.index')}}" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between"> --}}
                 <span><img src="{{URL('/images/add (1).png')}}" alt="c" class="img1 me-1">Rendez-Vous</span>
                 
             </a>
         </li>
-            <li class=""><a href="{{route('espace_doctor.dashbord.emails')}}" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+            {{-- <li class=""><a href="{{route('espace_doctor.dashbord.emails')}}" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between"> --}}
                     <span><img src="{{URL('/images/mail.png')}}" alt="c" class="img1 me-1"> Emails</span>
                     
                 </a>
@@ -59,13 +59,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <form class="d-flex" method="POST" action="{{route('dateNonDispo.store')}}">
+                            {{-- <form class="d-flex" method="POST" action="{{route('dateNonDispo.store')}}"> --}}
                                 @csrf
                                 <div class="input-group">
                                     <span class="input-group-text">Entrer les dates non disponible:</span>
                                     <input type="date" name="date_pas_dispo"  class="form-control">
                                     <input type="submit" value="Ajouter" class="btn btn-outline-primary">
-                                    <a href="{{route('dateNonDispo.index')}}" class="btn btn-outline-success">Voir listes des dates</a>
+                                    {{-- <a href="{{route('dateNonDispo.index')}}" class="btn btn-outline-success">Voir listes des dates</a> --}}
                                   </div>
                               </form>
                               
@@ -76,7 +76,7 @@
                                 @endif
                         </li>
                         <li class="nav-item ms-2">
-                            <form class="d-flex" method="POST" action="{{route('rendezvous.store')}}" >
+                            {{-- <form class="d-flex" method="POST" action="{{route('rendezvous.store')}}" > --}}
                                 @csrf
                                 <div class="input-group">
                                     <span class="input-group-text">Augmenter le nombre des rendez-vous:</span>

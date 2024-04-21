@@ -1,53 +1,4 @@
-/* =====================================
-Template Name: 	Mediplus.
-Author Name: Naimur Rahman
-Website: http://wpthemesgrid.com/
-Description: Mediplus - Doctor HTML Template.
-Version:	1.1
-========================================*/   
-/*======================================
-[ CSS Table of contents ]
-* Global CSS
-* Header CSS
-	+ Topbar
-	+ Logo
-	+ Widget
-	+ Main Menu
-	+ Search
-* Hero Slider CSS
-* Schedule CSS
-* Feautes CSS
-* Fun Facts CSS
-* Why Choose CSS
-* Call to Action CSS
-* Portfolio CSS
-	+ Portfolio Single CSS
-* Services CSS
-* Testimonials CSS
-* Departments CSS
-* Pricing Table CSS
-* Clients CSS
-* Team CSS
-	+ Single Team
-* Blog CSS
-	+ Latest Blog CSS
-	+ Blog Single CSS
-	+ Blog Sidebar CSS
-* Appointment CSS
-* Login CSS
-* Register CSS
-* Faq CSS
-* Contact Us CSS
-* Error 404 CSS
-* Mail Success CSS
-* Newsletter CSS
-* Doctor Calendar CSS
-* About Us CSS
-* Footer CSS
-========================================*/ 
-/*=============================
-	Global CSS 
-===============================*/
+
 body{
     font-family: 'Poppins', sans-serif;
 	font-weight: 400;
@@ -87,7 +38,7 @@ body{
 	color: #1A76D1;
 	font-size: 15px;
 }
-.pro-features .button{}
+
 .pro-features .button .btn {
 	width: 100%;
 	text-align: center;
@@ -1467,7 +1418,7 @@ body{
 	border-radius: 3px;
 	margin: 0 0 0 -52px;
 	margin-top: 49px;
-	box-sizing: ;
+	/* box-sizing: ; */
 }
 .testimonials .owl-dots .owl-dot {
 	display: inline-block;
@@ -3285,7 +3236,7 @@ body{
 	width: 100%;
 	height: 50px;
 	border: 1px solid #eee;
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 	padding: 0px 18px;
 	color: #555;
 	font-size: 14px;
@@ -3437,6 +3388,15 @@ body{
 	height: 100%;
 	width: 100%;
 }
+.contact-us #loginImg {
+	background-image: url('../img/signup-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+} 
+
 /*=========================
    End Contact Us CSS
 ===========================*/

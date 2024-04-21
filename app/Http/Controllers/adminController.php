@@ -14,6 +14,7 @@ class adminController extends Controller
     /**
      * Display a listing of the resource.
      */
+    
     public function index()
     {
         $today = Carbon::today();

@@ -11,7 +11,7 @@ class ContactController extends Controller
 {
     public function showForm()
     {
-        return view('espace_patient.contact');
+        return view('med.contact');
     }
 
     public function MessageEmails()

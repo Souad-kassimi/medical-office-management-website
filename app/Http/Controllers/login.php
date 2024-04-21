@@ -10,7 +10,9 @@ class login extends Controller
 {
     
     public function index(){
-        return view('espace_doctor.login');
+        // return view('espace_doctor.login');
+        return view('med.login');
+
     }
     public function login(Request $request){
         $request->validate([
@@ -38,5 +40,9 @@ class login extends Controller
         Auth::logout();
         return redirect()->route('login.index')->with('success','**Vous étes bien déconnecter');
 
+    }
+
+    public function dashbord(){
+        return view('med.admin.dashboard');
     }
 }

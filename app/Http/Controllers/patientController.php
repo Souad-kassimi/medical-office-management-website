@@ -66,11 +66,17 @@ class patientController extends Controller
         
               
                 $patient=patient::create($data);
-                return redirect()->route('rendezvous.show', ['rendezvou' => $patient->id]);
+                return redirect()->route('patient.data', ['id' => $patient->id]);
+
         
         
             }
         }  
+    }
+    public function patientdata( $id)
+    {
+        $patient = patient::findOrFail($id);
+        return view('med.patient',compact('patient'));
     }
 
 }
