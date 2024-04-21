@@ -56,7 +56,7 @@
 									<h1>Nous Fournissons Des services <span> Médicaux </span>En Lesquels Vous Pouvez Avoir <span>Confiance!</span></h1>
 									<p>Chez Cabinet Dr. Samira Bekrit, nous nous engageons à fournir des soins médicaux de confiance pour vous et vos proches. Notre équipe expérimentée est là pour répondre à tous vos besoins de santé.</p>
 									<div class="button">
-										<a href="{{ route('rendez-vous') }}" class="btn">Obtenir Un Rendez-vous</a>
+										<a href="{{ route('rendez-vous') }}" class="btn">Prendre rendez-vous</a>
 										<a href="{{route('med.contact')}}" class="btn primary">Contact-nous</a>
 									</div>
 								</div>
