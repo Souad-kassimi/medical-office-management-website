@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,11 @@
          
         <ul class="list-unstyled px-2">
             <li class="">
+<<<<<<< HEAD
                 {{-- <a href="{{route('admin.index')}}" class="text-decoration-none px-3 py-2 d-block"> --}}
+=======
+                <a href="" class="text-decoration-none px-3 py-2 d-block">
+>>>>>>> bbfe6d4ae1c6a2673879647bc6ab2838db45d34d
                 <img src="{{URL('/images/home.png')}}" alt="c" class="img1 me-1"> Dashboard
                 </a>
             </li>
@@ -29,7 +33,11 @@
                 
             </a>
         </li>
+<<<<<<< HEAD
             {{-- <li class=""><a href="{{route('espace_doctor.dashbord.emails')}}" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between"> --}}
+=======
+            <li class=""><a href="{{route('med.dashbord.emails')}}" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+>>>>>>> bbfe6d4ae1c6a2673879647bc6ab2838db45d34d
                     <span><img src="{{URL('/images/mail.png')}}" alt="c" class="img1 me-1"> Emails</span>
                     
                 </a>
@@ -105,4 +113,4 @@
     
   
 </body>
-</html>
+</html> -->

@@ -16,8 +16,8 @@ class ContactController extends Controller
 
     public function MessageEmails()
     {
-        $emailsBD=Email::all();
-        return view('espace_doctor.dashbord.emails',['emailsBD'=>$emailsBD]);
+        $emailsBD=Email::paginate(10);
+        return view('med.dashbord.emails',['emailsBD'=>$emailsBD]);
     }
    
     public function submitForm(Request $request)
@@ -36,7 +36,8 @@ class ContactController extends Controller
             'Message'=>$message,
         ]);
         Mail::to('fatimazahranamaoui90@gmail.com')->send(new ContactMail($data));
-        return view('espace_patient.contact');
+        return view('med.contact');
     }
+    
     
 }
