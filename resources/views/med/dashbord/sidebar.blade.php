@@ -1,20 +1,17 @@
-<div id="nav-bar">
+ <div id="nav-bar">
     <input id="nav-toggle" type="checkbox"/>
     <div id="nav-header"><a id="nav-title">Dr <i class="fab fa-medical"></i>Samira Bekrit</a>
       <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
       <hr/>
     </div>
     <div id="nav-content">
-      <div class="nav-button"><a href=""><i class="fas fa-palette"></i><span>Patients</span></a></div>
-      <div class="nav-button"><i class="fas fa-images"></i><span>Tout les patients</span></div>
-      <div class="nav-button"><i class="fas fa-thumbtack"></i><span>Pinned Items</span></div>
+      <div class="nav-button"><a href=""><i class="fas fa-user"></i><span>Patients</span></a></div>
+      <div class="nav-button"><i class="fas fa-users"></i><span>Tout les patients</span></div>
       <hr/>
-      <div class="nav-button"><i class="fas fa-heart"></i><span>Emails</span></div>
-      <div class="nav-button"><i class="fas fa-chart-line"></i><span>Rendez-Vous</span></div>
-      <div class="nav-button"><i class="fas fa-fire"></i><span>Challenges</span></div>
-      <div class="nav-button"><i class="fas fa-magic"></i><span>Spark</span></div>
+      <div class="nav-button" ><a href="{{route('med.dashbord.emails')}}"><i class="fas fa-envelope"></i><span>Emails</span></a></div>
+      <div class="nav-button"><i class="fas fa-address-card"></i><span>Rendez-Vous</span></div>
       <hr/>
-      <div class="nav-button"><i class="fas fa-gem"></i><span>Deconnecter</span></div>
+      <div class="nav-button"><i class="fas fa-arrow-circle-left"></i><span>Déconnecter</span></div>
       <div id="nav-content-highlight"></div>
     </div>
     <input id="nav-footer-toggle" type="checkbox"/>
@@ -29,3 +26,4 @@
       </div>
     </div>
   </div>
+  

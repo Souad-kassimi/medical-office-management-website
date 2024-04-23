@@ -43,6 +43,6 @@ class login extends Controller
     }
 
     public function dashbord(){
-        return view('med.admin.dashboard');
+        return view('med.dashbord.dashboard');
     }
 }

@@ -37,16 +37,6 @@ Route::resource('admin',adminController::class)->middleware('sign');
 // Route::post('/contact/store',[ContactController::class,'submitForm'])->name('med.submitForm');
 // Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
 
-<<<<<<< HEAD
-Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact');
-
-Route::get('/rendez-vous',[patientController::class,'rendezVousPage'] )->name('rendez-vous');
-Route::post('/rendezVous/ajouter',[patientController::class,'rendezVous'])->name('rendezVous');
-
-Route::get('/dashboared',[login::class,'dashbord']);
-
-Route::get('/patient/{id}',[patientController::class,'patientdata'])->name('patient.data');
-=======
 Route::get('/rendez-vous',[patientController::class,'rendezVousPage'] )->name('rendez-vous');
 Route::post('/rendezVous/ajouter',[patientController::class,'rendezVous'])->name('rendezVous');
 //Route de Contact
@@ -54,5 +44,5 @@ Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact
 Route::post('/contact', [ContactController::class,'submitForm'])->name('med.submitForm');
 Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
 
+Route::get('/dashbord',[login::class,'dashbord']);
 
->>>>>>> bbfe6d4ae1c6a2673879647bc6ab2838db45d34d
