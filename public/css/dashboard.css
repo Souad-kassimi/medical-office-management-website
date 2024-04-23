@@ -1,11 +1,11 @@
 :root {
-  --background: #9c88ff;
+  --background: hsl(0, 0%, 100%);
   --navbar-width: 256px;
   --navbar-width-min: 80px;
-  --navbar-dark-primary: #18283b;
-  --navbar-dark-secondary: #2c3e50;
+  --navbar-dark-primary: #1a76d1;
+  --navbar-dark-secondary: #6ea5dc;
   --navbar-light-primary: #f5f6fa;
-  --navbar-light-secondary: #8392a5;
+  --navbar-light-secondary: #ffffff;
 }
 
 html, body {
@@ -160,7 +160,7 @@ label[for=nav-toggle] {
 }
 #nav-content::-webkit-scrollbar-thumb {
   border-radius: 99px;
-  background-color: #D62929;
+  background-color: #6ea5dc;
 }
 
 #nav-content-highlight {
@@ -343,5 +343,5 @@ label[for=nav-footer-toggle] {
 }
 #nav-footer-content::-webkit-scrollbar-thumb {
   border-radius: 99px;
-  background-color: #D62929;
+  background-color: #1a76d1;
 }

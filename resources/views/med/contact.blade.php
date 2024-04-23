@@ -28,7 +28,10 @@
 						<div class="col-lg-6">
 							<div class="contact-us-left">
 								<!--Start Google-map -->
-								<div id="myMap"></div>
+								<div id="myMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3370.9877544923183!2d-6.359070225655457!3d32.33903830624215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda3875163c6170f%3A0x2845535dbe855f9e!2sDr%20BEKRIT%20SAMIRA!5e0!3m2!1sen!2sma!4v1712868771623!5m2!1sen!2sma"  
+									style="height: 520px;width:600px;border:solid white 1px;border-radius:15px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
 								<!--/End Google-map -->
 							</div>
 						</div>
@@ -85,8 +88,8 @@
 							<div class="single-info">
 								<i class="icofont-google-map"></i>
 								<div class="content">
-									<h3>2 Fir e Brigade Road</h3>
-									<p>Chittagonj, Lakshmipur</p>
+									<h3>132,Avenue des far </h3>
+									<p>Béni Mellal ,Maroc</p>
 								</div>
 							</div>
 						</div>
@@ -108,10 +111,5 @@
 		</section>
 		<!--/ End Contact Us -->
 		
-<<<<<<< HEAD
-		<!-- Footer Area -->
-		
-=======
->>>>>>> bbfe6d4ae1c6a2673879647bc6ab2838db45d34d
 		
 @endsection

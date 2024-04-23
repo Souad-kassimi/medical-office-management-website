@@ -1,8 +1,7 @@
-
-<!-- @extends('espace_doctor.dashbord.contenu')
-@section('titre')
+@extends('med.dashbord.dashboard')
+{{-- @section('titre')
    Liste de Emails
-@endsection
+@endsection --}}
 @section('section')
 <section class="container"> -->
 <link rel="stylesheet" href="{{asset('css/css.css')}}">

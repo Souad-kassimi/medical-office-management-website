@@ -24,6 +24,7 @@ class login extends Controller
             'email' => $request->input('email'),
             'password' => $request->input('password')
         ];
+        
         $email=$request->input('email');
         if (Auth::attempt($credentials)) {
             
@@ -43,6 +44,6 @@ class login extends Controller
     }
 
     public function dashbord(){
-        return view('med.admin.dashboard');
+        return view('med.dashbord.dashboard');
     }
 }
