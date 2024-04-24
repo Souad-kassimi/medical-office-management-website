@@ -1,58 +1,65 @@
 <?php
-
-use App\Http\Controllers\adminController;
-use App\Http\Controllers\dates_non_dispoController;
 use App\Http\Controllers\login;
 use App\Http\Controllers\patientController;
-use App\Http\Controllers\rendezvousController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/',function(){
-//     return view('espace_patient.acceuil');
-// });
+
 Route::get('/',function(){
     return view('med.accueil');
 })->name('patient');
-//routes de patient
-// Route::resource('patient',patientController::class);
-// Route::get('/patient',[patientController::class,'patientAcceuil'])->name('patient');
-//routes de rendez-vous
-// Route::resource('rendezvous',rendezvousController::class);
+
 //routes de login
 Route::get('/login',[login::class,'index'])->name('login.index');
-Route::get('/logout',[login::class,'logout'])->name('login.logout');
 Route::post('/login/singin',[login::class,'login'])->name('login.signin');
+Route::get('/logout',[login::class,'logout'])->name('login.logout');
 
-
-//routes de admin
-Route::resource('admin',adminController::class)->middleware('auth');
-Route::resource('admin',adminController::class)->middleware('sign');
-
-
-//routes de dates
-// Route::resource('dateNonDispo',dates_non_dispoController::class);
-//routes de contact
-
-// Route::post('/contact/store',[ContactController::class,'submitForm'])->name('med.submitForm');
-// Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
-
-// <<<<<<< HEAD
-Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact');
-
+//rendez vous
 Route::get('/rendez-vous',[patientController::class,'rendezVousPage'] )->name('rendez-vous');
 Route::post('/rendezVous/ajouter',[patientController::class,'rendezVous'])->name('rendezVous');
+Route::get('/rendez-vous/{id}',[patientController::class,'patientdata'] )->name('patient.data');
 
-Route::get('/dashboared',[login::class,'dashbord']);
 
-Route::get('/patient/{id}',[patientController::class,'patientdata'])->name('patient.data');
-// =======
-Route::get('/rendez-vous',[patientController::class,'rendezVousPage'] )->name('rendez-vous');
-Route::post('/rendezVous/ajouter',[patientController::class,'rendezVous'])->name('rendezVous');
 //Route de Contact
 Route::get('/contact', [ContactController::class,'showForm'])->name('med.contact');
 Route::post('/contact', [ContactController::class,'submitForm'])->name('med.submitForm');
-Route::get('/emails', [ContactController::class,'MessageEmails'])->name('med.dashbord.emails');
+
+
+
+
+//dashboard without middleware
+Route::get('/emails', [dashboardController::class,'MessageEmails'])->name('dashboard.emails');
+Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboard');
+Route::get('/patients',[dashboardController::class,'allpatients'])->name('dashboard.patients');
+Route::delete('supprimerPatient/{id}',[dashboardController::class,'supprimerPatient'])->name('supprimerPatient');
+Route::get('/settings',[dashboardController::class,'showdate'])->name('dashboard.settings');
+Route::post('/addDate',[dashboardController::class,'addDate'])->name('dashboard.addDate');
+Route::delete('/supprimerDate/{id}',[dashboardController::class,'supprimerDate'])->name('supprimerDate');
+Route::post('/patientFitrer',[dashboardController::class,'search'])->name('patient.filtrer');
+
+
+
+
+
+//dashboard with middleware
+// Route::middleware('login')->group(function(){
+//     Route::get('/emails', [dashboardController::class,'MessageEmails'])->name('dashboard.emails');
+
+//     Route::get('/dashboard',[dashboardController::class,'dashboard'])->name('dashboard');
+//     Route::get('/patients',[dashboardController::class,'allpatients'])->name('dashboard.patients');
+//     Route::delete('supprimerPatient/{id}',[dashboardController::class,'supprimerPatient'])->name('supprimerPatient');
+    
+    
+//     Route::get('/settings',[dashboardController::class,'showdate'])->name('dashboard.settings');
+//     Route::post('/addDate',[dashboardController::class,'addDate'])->name('dashboard.addDate');
+//     Route::delete('/supprimerDate/{id}',[dashboardController::class,'supprimerDate'])->name('supprimerDate');
+    
+//     Route::post('/patientFitrer',[dashboardController::class,'search'])->name('patient.filtrer');
+// });
+
+
+
 
 
 

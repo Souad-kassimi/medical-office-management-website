@@ -1,16 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-</head>
-<body>
-    @include('med.dashbord.sidebar')
-    @yield('section')
-    
+@extends('med.dashbord.base')
+@section('titre','Dashboard')
+@section('dashboard')
+<div class="todo">
 
-</body>
-</html>
+
+	<div class="head">
+		<h3>Les rendez-vous d'Aujourdhui</h3>
+	</div>
+ 
+    <ul class="box-info">
+            @foreach ($patientsfilter->sortBy('tour') as $item)
+				<li>
+                    
+					<span class="text">
+						<span id="monBouton" class="status pending" >{{$item->tour}}</span>
+						<h3>{{$item->prenom}} {{$item->nom}} </h3>
+						<p>CIN: {{$item->cin}}, Ville: {{$item->ville}}</p>
+						<p>{{$item->date_rendez_vous}}</p>
+						
+
+					</span>
+				</li>
+            @endforeach			
+    </ul>
+</div>
+<script>
+   
+    var boutons = document.querySelectorAll('.pending');
+
+  
+    boutons.forEach(function(bouton) {
+        bouton.addEventListener('click', function() {
+          
+            bouton.classList.toggle('active');
+        });
+    });
+</script>
+
+
+@endsection
+    

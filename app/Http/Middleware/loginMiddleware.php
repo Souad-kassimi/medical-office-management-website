@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class admin
+class loginMiddleware
 {
     /**
      * Handle an incoming request.
@@ -19,6 +19,7 @@ class admin
         if(!Auth::check()){
             return redirect()->route('login.index');
         }
+        
         return $next($request);
     }
 }

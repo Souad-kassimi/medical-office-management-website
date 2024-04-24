@@ -11,12 +11,14 @@ class patientController extends Controller
 {
     public function patientAcceuil()
     {
+        
         return view('med.accueil');
         
     }
     public function rendezVousPage() {
+        $dates_non_dispo=dates_non_dispo::all();
+        return view('med.rendezVous')->with('dates_non_dispo',$dates_non_dispo);
        
-        return view('med.rendezVous');
     }
 
     public function rendezVous(Request $request){
@@ -24,6 +26,7 @@ class patientController extends Controller
         if ($request->filled('count')) {
     
             session(['count' => (int)$request->input('count')]);
+            return redirect()->route('dashboard.settings')->with('success','Le nombre changer  avec succes');
         }
     
         $data = $request->validate([
@@ -45,9 +48,12 @@ class patientController extends Controller
         $appointmentsCount = patient::where('date_rendez_vous', $data['date_rendez_vous'])->count();
         $dateObj = \Carbon\Carbon::createFromFormat('Y-m-d', $dateRendezVous);
         $date_non_dispo = dates_non_dispo::where('date_pas_dispo', $dateRendezVous)->exists();
-        if (Carbon::createFromFormat('Y-m-d', $dateRendezVous)->isPast()) {
-            return back()->withErrors(['errors' => 'Désolé, vous ne pouvez pas prendre de rendez-vous pour une date passée.'])->withInput();
+        $dateActuelle = Carbon::now()->format('Y-m-d');
+        if ($dateRendezVous < $dateActuelle) {
+            
+            return 'hello';
         }
+       
         if ($date_non_dispo) {
             return back()->withErrors(['errors'=>'Désolé, Cette date est pas disponible'])->withInput();
         }
@@ -76,7 +82,9 @@ class patientController extends Controller
     public function patientdata( $id)
     {
         $patient = patient::findOrFail($id);
-        return view('med.patient',compact('patient'));
+        return view('med.patient')->with('patient',$patient);
     }
+
+   
 
 }

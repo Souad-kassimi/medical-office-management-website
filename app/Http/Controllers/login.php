@@ -10,7 +10,7 @@ class login extends Controller
 {
     
     public function index(){
-        // return view('espace_doctor.login');
+      
         return view('med.login');
 
     }
@@ -29,7 +29,7 @@ class login extends Controller
         if (Auth::attempt($credentials)) {
             
             $request->session()->regenerate();
-            return redirect()->route('admin.index')->with('success','Connecter avec succés '.$email.'.');
+            return redirect()->route('dashboard')->with('success','Connecter avec succés '.$email.'.');
         } else {
         return back()->withErrors(['email' => 'Email ou mot de passe incorrect.'])->onlyInput('email');
             
@@ -43,7 +43,5 @@ class login extends Controller
 
     }
 
-    public function dashbord(){
-        return view('med.dashbord.dashboard');
-    }
+  
 }

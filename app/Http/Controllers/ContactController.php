@@ -14,11 +14,7 @@ class ContactController extends Controller
         return view('med.contact');
     }
 
-    public function MessageEmails()
-    {
-        $emailsBD=Email::paginate(10);
-        return view('med.dashbord.emails',['emailsBD'=>$emailsBD]);
-    }
+  
    
     public function submitForm(Request $request)
     {
