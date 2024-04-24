@@ -51,7 +51,7 @@ class patientController extends Controller
         $dateActuelle = Carbon::now()->format('Y-m-d');
         if ($dateRendezVous < $dateActuelle) {
             
-            return 'hello';
+            return back()->withErrors(['errors'=>'Désolé, vous ne pouvez pas prendre de rendez-vous pour une date passée.'])->withInput();
         }
        
         if ($date_non_dispo) {
