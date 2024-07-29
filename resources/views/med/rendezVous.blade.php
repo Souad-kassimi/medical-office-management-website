@@ -15,10 +15,10 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-12 col-12">
-						<div class="alert alert-primary">
+
 						@isset($dates_non_dispo)
 						@if ($dates_non_dispo->isNotEmpty())
-						
+                        <div class="alert alert-primary">
 							<h3>Voici les dates <strong class="text-danger">NON DISPONIBLES</strong></h3>
 							<img src="img/section-img.png" alt="#">
 							<ul>
@@ -26,10 +26,10 @@
 								<li>{{$item->date_pas_dispo}}</li>
 								@endforeach
 							</ul>
-						
+                        </div>
 						@endif
 						@endisset
-					</div>
+
                         @if ($errors->has('errors'))
                         <ul class="list-unstyled">
                             @foreach ($errors->get('errors') as $error)
@@ -38,7 +38,7 @@
                                 @endif
                             @endforeach
                         </ul>
-                        @endif 
+                        @endif
 
 
 
@@ -81,7 +81,7 @@
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										
+
 										<input name="ville" type="text" value="{{old('ville')}}" placeholder="Ville">
 										@error('ville')
 										<span class="text-danger">{{$message}}</span>
@@ -98,7 +98,7 @@
 								</div>
 								<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
-										
+
 										<select name="genre" value="{{old('genre')}}" class="nice-select form-control wide">
 											<option value="" selected disabled>Genre</option>
 											<option value="femme">Femme</option>
@@ -132,5 +132,5 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Appointment --> 
+		<!-- End Appointment -->
 @endsection

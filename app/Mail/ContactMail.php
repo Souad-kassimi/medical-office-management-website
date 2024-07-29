@@ -23,7 +23,7 @@ class ContactMail extends Mailable
     
     public function build() 
     {
-        return $this->from($this-> data['email'],$this-> data['name'])
+        return $this->from($this->data['email'],$this->data['name'])
                     ->subject('Contact le cabinet de dr samira bekrit')
                     ->view('med.dashbord.data')
                     ->with(['data' => $this->data]); // Passer les données à la vue de l'e-mail

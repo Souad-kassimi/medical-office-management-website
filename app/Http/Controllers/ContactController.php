@@ -31,7 +31,7 @@ class ContactController extends Controller
             'Email'=>$email,
             'Message'=>$message,
         ]);
-        Mail::to('fatimazahranamaoui90@gmail.com')->send(new ContactMail($data));
+        Mail::to('alam2001souad@gmail.com')->send(new ContactMail($data));
         return view('med.contact');
     }
     

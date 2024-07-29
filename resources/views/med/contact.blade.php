@@ -99,7 +99,7 @@
 							<div class="single-info">
 								<i class="icofont icofont-wall-clock"></i>
 								<div class="content">
-									<h3>Lundi au Samdi: 8h - 17h</h3>
+									<h3>Lundi au Vendredi: 8h - 17h</h3>
 									<p>Dimanche fermé</p>
 								</div>
 							</div>

@@ -39,7 +39,7 @@
                         <p>Le cabinet du Dr. Samira Bekrit est ouvert du lundi au vendredi de 9h00 à 17h00, offrant des consultations et des services médicaux pendant ces heures.</p>
                         <ul class="time-sidual">
                             <li class="day">Lundi - Vendredi <span>9.00-17.00</span></li>
-                            <li class="day">Samedi <span>9.00-12.00</span></li>
+                            <li class="day">Samedi <span>Fermer</span></li>
                         </ul>
                     </div>
                 </div>
